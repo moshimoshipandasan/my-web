@@ -1,4 +1,173 @@
-青春は海だ！ニューシングルリリース
-高校生活に退屈を感じた高校生が海へと向かう青春のほろ苦い思い出の曲
-
-伊集院隼人
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>青春は海だ！ニューシングルリリース</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+	<style>
+		body {
+			margin: 0;
+			font-family: 'Noto Sans JP', sans-serif;
+			background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+		}
+		.line-header {
+			width: 100vw;
+			background: #06c755;
+			color: #fff;
+			padding: 1.5rem 0 1rem 0;
+			text-align: center;
+			font-size: 2.2rem;
+			font-weight: bold;
+			letter-spacing: 0.1em;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+			position: sticky;
+			top: 0;
+			z-index: 10;
+		}
+		.container {
+			background: rgba(255,255,255,0.95);
+			border-radius: 24px;
+			box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+			margin-top: 2rem;
+			padding: 2.5rem 2rem 2rem 2rem;
+			max-width: 480px;
+			width: 95vw;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.profile-img {
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			object-fit: cover;
+			border: 4px solid #06c755;
+			margin-bottom: 1.2rem;
+			box-shadow: 0 4px 16px rgba(6,199,85,0.15);
+		}
+		.song-title {
+			font-size: 1.6rem;
+			font-weight: bold;
+			color: #222;
+			margin-bottom: 0.5rem;
+			text-align: center;
+		}
+		.desc {
+			font-size: 1.1rem;
+			color: #444;
+			margin-bottom: 1.5rem;
+			text-align: center;
+		}
+		.audio-player {
+			margin-bottom: 1.5rem;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+		.author {
+			font-size: 1rem;
+			color: #06c755;
+			font-weight: bold;
+			margin-bottom: 1.5rem;
+		}
+		.infographic {
+			width: 100%;
+			margin: 1.5rem 0 0.5rem 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.infographic-bar {
+			width: 90%;
+			background: #e0e0e0;
+			border-radius: 12px;
+			margin: 0.5rem 0;
+			height: 24px;
+			position: relative;
+			overflow: hidden;
+		}
+		.infographic-bar-inner {
+			height: 100%;
+			border-radius: 12px;
+			background: linear-gradient(90deg, #06c755 60%, #00bfff 100%);
+			position: absolute;
+			left: 0;
+			top: 0;
+			transition: width 1.2s cubic-bezier(.4,2,.6,1);
+		}
+		.infographic-label {
+			font-size: 0.95rem;
+			color: #333;
+			margin-bottom: 0.2rem;
+			margin-top: 0.5rem;
+			text-align: left;
+			width: 90%;
+		}
+		.footer {
+			margin-top: 2.5rem;
+			color: #888;
+			font-size: 0.95rem;
+			text-align: center;
+		}
+		@media (max-width: 600px) {
+			.container {
+				padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+			}
+			.line-header {
+				font-size: 1.3rem;
+				padding: 1rem 0 0.7rem 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="line-header">青春は海だ！ニューシングルリリース</div>
+	<div class="container">
+		<img src="ando8bit.png" alt="アーティスト画像" class="profile-img">
+		<div class="song-title">青春は海だ！</div>
+		<div class="desc">高校生活に退屈を感じた高校生が海へと向かう<br>青春のほろ苦い思い出の曲</div>
+		<div class="audio-player">
+			<audio controls preload="auto" src="青春は海だ！.mp3">
+				お使いのブラウザはaudioタグに対応していません。
+			</audio>
+		</div>
+		<div class="author">by 伊集院隼人</div>
+		<div class="infographic">
+			<div class="infographic-label">世界中のフィット度</div>
+			<div class="infographic-bar">
+				<div class="infographic-bar-inner" style="width: 92%"></div>
+			</div>
+			<div class="infographic-label">青春共感度</div>
+			<div class="infographic-bar">
+				<div class="infographic-bar-inner" style="width: 88%"></div>
+			</div>
+			<div class="infographic-label">エモさ</div>
+			<div class="infographic-bar">
+				<div class="infographic-bar-inner" style="width: 97%"></div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		&copy; 2025 伊集院隼人 / 青春は海だ！ All rights reserved.<br>
+		<span style="font-size:0.9em;">#青春は海だ #新曲 #エモい #LINE風</span>
+	</div>
+	<script>
+		// アニメーションでインフォグラフィックバーを伸ばす
+		window.addEventListener('DOMContentLoaded', () => {
+			document.querySelectorAll('.infographic-bar-inner').forEach(bar => {
+				const width = bar.style.width;
+				bar.style.width = '0';
+				setTimeout(() => {
+					bar.style.width = width;
+				}, 300);
+			});
+		});
+	</script>
+</body>
+</html>
